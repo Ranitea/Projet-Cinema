@@ -1,22 +1,29 @@
+
 <script context="module">
 	export const prerender = true;
 </script>
 
-<script>
+<!-- <script>
 	import Counter from '$lib/Counter.svelte';
+</script>
+-->
+
+<script>
+	
+	import films from '$lib/ListingFilms.js';
 </script>
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Répertoire Cinéma" />
 </svelte:head>
 
 <section>
 	<h1>
 		<div class="welcome">
 			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
+				<source srcset="svelte-logo.webp" type="image/webp" />
+				<img src="svelte-welcome.png" alt="Logo" />
 			</picture>
 		</div>
 
@@ -27,7 +34,7 @@
 		try editing <strong>src/routes/index.svelte</strong>
 	</h2>
 
-	<Counter />
+	<films />
 </section>
 
 <style>
